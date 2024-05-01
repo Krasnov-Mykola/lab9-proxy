@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  /* display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 200px;
+  padding-top: 30px;
+  padding-bottom: 30px; */
+  @apply flex justify-center flex-row gap-52 py-8;
+}
+/* .traffic-light-vertical {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+} */
+.traffic-light-horisontal {
+  /* display: flex;
+  align-items: center;
+  flex-direction: column;
+  transform: rotate(-90deg); */
+  @apply flex items-center flex-col rotate-[-90deg];
+}
+
+.color{
+  /* padding: 10px; */
+  @apply p-2.5
+}
+
+.stats-bar{
+  /* background-color: black;
+  padding: 20px;
+  border-radius: 10%;
+  color: white; */
+  @apply bg-black text-white p-5 rounded-custom;
+}
+
+button{
+  /* margin-bottom: 10px; */
+  @apply mb-2.5;
+}
+
+.count{
+  /* justify-content:space-between; */
+  @apply space-x-0 flex flex-row
+}

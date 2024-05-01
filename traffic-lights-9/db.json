@@ -1,0 +1,19 @@
+{
+  "config_new": [
+    {
+      "color": "red",
+      "count": 0,
+      "id": "1"
+    },
+    {
+      "color": "yellow",
+      "count": 0,
+      "id": "2"
+    },
+    {
+      "color": "green",
+      "count": 0,
+      "id": "3"
+    }
+  ]
+}

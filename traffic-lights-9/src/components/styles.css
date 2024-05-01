@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.traffic-light-container {
+    /* background-color: #000;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px; */
+    @apply bg-black rounded-3xl flex flex-col p-4 gap-4;
+  }
+  
+  .traffic-light {
+    /* background-color: #555;
+    --size: 100px;
+    border-radius: var(--size);
+    height: var(--size);
+    width: var(--size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; */
+    @apply bg-gray-700 size-28 flex items-center justify-center h-[100px] w-[100px] rounded-full cursor-pointer;
+  }
+  
+  .stats-bar {
+    /* margin-top: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center; */
+    @apply mt-5 mb-8 flex content-center flex-col;
+  }
+  
+  .stats-bar button {
+    /* padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    cursor: pointer; */
+    @apply p-2.5 rounded-md cursor-pointer bg-gradient-to-r from-red-600 via-yellow-400 to-green-600;
+  }
+  
+  .container{
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+    @apply flex content-center items-center flex-col;
+  }
+
+  .menu{
+    /* padding: 20px 0 20px 0; */
+    @apply py-5;
+  }
+
+  .menu-element{
+    /* padding: 0 10px 0 10px; */
+    @apply px-2.5;
+  }
+
+  h2{
+    /* padding: 0;
+    margin: 0;
+    text-align: center; */
+    @apply p-0 m-0 text-center text-3xl font-bold;
+  }
+
+  h3{
+    /* padding: 0;
+    margin: 0;
+    text-align: center; */
+    @apply p-0 m-0 text-center text-2xl font-medium;
+  }
+
+  h4{
+    /* margin: 0;
+    padding: 0;
+    font-size: large;
+    font-weight: normal; */
+    @apply p-0 m-0 text-lg font-normal
+  }
