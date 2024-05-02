@@ -5,20 +5,28 @@ const TrafficLightsContext = createContext()
 export const TrafficLightsProvider = ({children}) => {
     const [config, setConfig] = useState({
         red: {
+          duration: 10000,
           backgroundColor: "red",
-          count: 0
+          count: 0,
+          next: "green",
         },
         yellow: {
+          duration: 1500,
           backgroundColor: "yellow",
-          count: 0
+          count: 0,
+          next: "red",
         },
         green: {
+          duration: 10000,
           backgroundColor: "green",
-          count: 0
+          count: 0,
+          next: "yellow",
         }
       });
 
       const [layout, setLayout] = useState("vertical");
+
+      const [avtoLight, setAvtoLight] = useState("green");
 
       useEffect(() => {
         fetchData();
@@ -98,6 +106,8 @@ export const TrafficLightsProvider = ({children}) => {
         activeColor,
         setActiveColor,
         handleLightClick,
+        avtoLight,
+        setAvtoLight,
 
     }}>
         {children}

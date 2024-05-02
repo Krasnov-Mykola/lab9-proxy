@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Home from "./Pages/Home";
 import TrafficLightLayout from "./Pages/TrafficLightLayout";
+import Exam from "./Pages/Exam";
 
 
 function App() {
@@ -20,6 +21,11 @@ function App() {
       {
       path: "/:direction",
       element: <TrafficLightLayout />,
+      errorElement: <ErrorPage />
+    },
+    {
+      path: "/exam",
+      element: <Exam />,
       errorElement: <ErrorPage />
     }
   ]);
