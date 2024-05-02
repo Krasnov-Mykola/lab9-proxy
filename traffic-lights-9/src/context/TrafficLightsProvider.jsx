@@ -24,9 +24,25 @@ export const TrafficLightsProvider = ({children}) => {
         }
       });
 
+      const pedestrianConfig = {
+        red: {
+          duration: 10000,
+          backgroundColor: "red",
+          next: "green",
+        },
+        green: {
+          duration: 10000,
+          backgroundColor: "green",
+          next: "red",
+        },
+      };
+
       const [layout, setLayout] = useState("vertical");
+      const [activeColor, setActiveColor] = useState("gray");
 
       const [avtoLight, setAvtoLight] = useState("green");
+      const [currentColor, setCurrentColor] = useState("red");
+      const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
       useEffect(() => {
         fetchData();
@@ -36,7 +52,21 @@ export const TrafficLightsProvider = ({children}) => {
         setLayout(newLayout);
       };
 
-      const [activeColor, setActiveColor] = useState("gray");
+      const handlePedestrianLightChange = () => {
+        if (avtoLight === "green") {
+          setIsButtonDisabled(true);
+          setTimeout(() => {
+            setIsButtonDisabled(false);
+          }, 10000);
+          return;
+        }
+        if (currentColor === "red") {
+          setCurrentColor("green");
+        } else {
+          setCurrentColor("red");
+        }
+        setIsButtonDisabled(false);
+      };
 
       const fetchData = async () => {
         try {
@@ -108,6 +138,11 @@ export const TrafficLightsProvider = ({children}) => {
         handleLightClick,
         avtoLight,
         setAvtoLight,
+        currentColor,
+        setCurrentColor,
+        handlePedestrianLightChange,
+        isButtonDisabled,
+        pedestrianConfig
 
     }}>
         {children}

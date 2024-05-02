@@ -1,5 +1,6 @@
 import AvtoTrafficLight from "../components/AvtoTrafficLight";
 import Header from "../components/Header";
+import PedestrianTrafficLight from "../components/PedestrianTrafficLight";
 
 function Exam(){
     return(
@@ -9,7 +10,10 @@ function Exam(){
         </div>
 
         <div className="App">
-        <AvtoTrafficLight />
+            <AvtoTrafficLight />
+            <div className="traffic-light-pedestrian">
+                <PedestrianTrafficLight />
+            </div>
         </div>
         </>
     )

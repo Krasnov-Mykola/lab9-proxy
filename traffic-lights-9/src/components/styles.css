@@ -80,3 +80,19 @@
     font-weight: normal; */
     @apply p-0 m-0 text-lg font-normal
   }
+
+  .traffic-light-pedestrian {
+    @apply flex flex-col pt-8 items-center;
+  }
+
+  .btn {
+    @apply max-h-max min-w-max bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg;
+    &[disabled] {
+      @apply opacity-50 cursor-not-allowed; 
+    }
+  }
+
+  .button{
+    @apply mt-8 p-0;
+  }
+  

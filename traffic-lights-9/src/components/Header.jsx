@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import StatsBar from "./StatsBar";
 function Header() {
     return(
         <>
@@ -9,7 +8,7 @@ function Header() {
         <NavLink to="/vertikal" className="menu-element">Vertical</NavLink>
         <NavLink to="/exam" className="menu-element">Exam</NavLink>
     </div>
-   <StatsBar />
+   
     </>
 )
 }

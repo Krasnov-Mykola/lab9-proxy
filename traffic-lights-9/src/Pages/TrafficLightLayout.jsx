@@ -3,6 +3,7 @@ import TrafficLight from "../components/TrafficLight";
 import { useContext, useEffect } from "react";
 import TrafficLightsContext from "../context/TrafficLightsProvider";
 import {useParams} from "react-router-dom"
+import StatsBar from "../components/StatsBar";
 
 function TrafficLightLayout() {
     
@@ -18,6 +19,9 @@ function TrafficLightLayout() {
         <>
         <div className="container">
             <Header />
+        </div>
+        <div className="App">
+        <StatsBar />
         </div>
         <div className="App">
           <div className={`traffic-light-${direction}`}>
