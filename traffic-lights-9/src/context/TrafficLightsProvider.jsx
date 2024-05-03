@@ -62,8 +62,10 @@ export const TrafficLightsProvider = ({children}) => {
         }
         if (currentColor === "red") {
           setCurrentColor("green");
+          setAvtoLight("red")
         } else {
           setCurrentColor("red");
+          setAvtoLight("green")
         }
         setIsButtonDisabled(false);
       };
